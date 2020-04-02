@@ -55,32 +55,32 @@
             <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>HOME</span>
+                    <span>主页</span>
                 </a>
             </li>
             <li class="active">
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>TAGS</span>
+                    <span>标签</span>
                 </a>
             </li>
             <li>
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>ARCHIVES</span>
+                    <span>存档</span>
                 </a>
             </li>
             <li>
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>ABOUT</span>
+                    <span>关于</span>
                 </a>
             </li>
             
             <li>
                 <a id="search">
                     <i class="iconfont icon-sousuo1"></i>
-                    <span>SEARCH</span>
+                    <span>搜索</span>
                 </a>
             </li>
             
@@ -95,7 +95,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input">
-            <span id="begin-search">search</span>
+            <span id="begin-search">搜索</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -111,17 +111,19 @@
         <!-- Main Content -->
         <div id="tag_cloud" class="tags">
     
+    <a href="#水平居中" title="水平居中" rel="1">水平居中</a>
+    
+    <a href="#垂直居中" title="垂直居中" rel="1">垂直居中</a>
+    
     <a href="#setting" title="setting" rel="2">setting</a>
     
     <a href="#java-array" title="java-array" rel="1">java-array</a>
     
-    <a href="#垂直居中" title="垂直居中" rel="1">垂直居中</a>
+    <a href="#js-call-bind-apply" title="js-call-bind-apply" rel="1">js-call-bind-apply</a>
     
     <a href="#js-type" title="js-type" rel="1">js-type</a>
     
     <a href="#Set-Map" title="Set-Map" rel="1">Set-Map</a>
-    
-    <a href="#js-call-bind-apply" title="js-call-bind-apply" rel="1">js-call-bind-apply</a>
     
     <a href="#js-this" title="js-this" rel="2">js-this</a>
     
@@ -157,6 +159,48 @@
 
 
 <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="水平居中">
+                    <span class="tag-text">水平居中</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2020/04/02/css/水平居中/">
+            <h2 class="post-title">
+                css水平居中
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="垂直居中">
+                    <span class="tag-text">垂直居中</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2020/04/02/css/垂直居中/">
+            <h2 class="post-title">
+                css垂直居中
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="setting">
                     <span class="tag-text">setting</span>
                 </span>
@@ -166,9 +210,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2020/04/01/hexo/hexo/">
+        <a href="/2020/02/25/git/代理/">
             <h2 class="post-title">
-                hexo问题
+                git代理
             </h2>
             
         </a>
@@ -180,9 +224,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2020/02/25/git/代理/">
+        <a href="/2020/04/01/hexo/hexo/">
             <h2 class="post-title">
-                git代理
+                hexo问题
             </h2>
             
         </a>
@@ -213,8 +257,8 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="垂直居中">
-                    <span class="tag-text">垂直居中</span>
+                <span class="fa fa-tag listing-seperator" id="js-call-bind-apply">
+                    <span class="tag-text">js-call-bind-apply</span>
                 </span>
     
     <!-- <li class="listing-item">
@@ -222,9 +266,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2020/04/02/css/垂直居中/">
+        <a href="/2020/03/14/js基础/call/">
             <h2 class="post-title">
-                css垂直居中
+                call apply bind
             </h2>
             
         </a>
@@ -267,27 +311,6 @@
         <a href="/2020/04/01/js基础/set和map/">
             <h2 class="post-title">
                 Set和Map
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-</div>
-
-<div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="js-call-bind-apply">
-                    <span class="tag-text">js-call-bind-apply</span>
-                </span>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2020/03/14/js基础/call/">
-            <h2 class="post-title">
-                call apply bind
             </h2>
             
         </a>
