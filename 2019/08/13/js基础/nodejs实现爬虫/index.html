@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        nodejs实现爬虫 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        <div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/favicon.ico">
+        </div>
+        <div class="name">
+            <i>七夜的许愿星</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#封装函数-通过url访问服务器"><span class="toc-text">封装函数(通过url访问服务器)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#nodejs实现简单爬虫"><span class="toc-text">nodejs实现简单爬虫</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#函数调用"><span class="toc-text">函数调用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#封装函数-通过url访问服务器-1"><span class="toc-text">封装函数(通过url访问服务器)</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        nodejs实现爬虫
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-08-13 22:59:22</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#node.js" title="node.js">node.js</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <p>node.js实现简单爬虫<br><a id="more"></a></p>
+<h5 id="封装函数-通过url访问服务器"><a href="#封装函数-通过url访问服务器" class="headerlink" title="封装函数(通过url访问服务器)"></a>封装函数(通过url访问服务器)</h5><pre><code>function GetUrl(sUrl,success){
+    let http =&apos;&apos;;//把url转为url对象
+    let urlObj=url.parse(sUrl);//判断调用引入http模块/https模块
+    if (urlObj.protocol == &apos;http:&apos;){
+        http =require(&apos;http&apos;);  }
+    else{   http =require(&apos;https&apos;); }
+</code></pre><h5 id="nodejs实现简单爬虫"><a href="#nodejs实现简单爬虫" class="headerlink" title="nodejs实现简单爬虫"></a>nodejs实现简单爬虫</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const fs =require(&apos;fs&apos;);</span><br><span class="line">const url=require(&apos;url&apos;);</span><br><span class="line">const JSDOM =require(&apos;jsdom&apos;).JSDOM;</span><br></pre></td></tr></table></figure>
+<h6 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">GetUrl(&apos;https://www.baidu.com/&apos;,data=&gt;&#123;</span><br><span class="line"></span><br><span class="line">    let DOM =new JSDOM(data);</span><br><span class="line">    let document =DOM.window.document;</span><br><span class="line">    let source =document.querySelector(&apos;#lg&apos;).children[0].src;</span><br><span class="line">    let oUrl =&apos;https:&apos;+source+&apos;&apos;;</span><br><span class="line">    GetUrl(oUrl,data=&gt;&#123;</span><br><span class="line">        console.log(data);</span><br><span class="line">        fs.writeFile(&apos;a.jpg&apos;,data,()=&gt; &#123;</span><br><span class="line">            console.log(&quot;抓取成功&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h6 id="封装函数-通过url访问服务器-1"><a href="#封装函数-通过url访问服务器-1" class="headerlink" title="封装函数(通过url访问服务器)"></a>封装函数(通过url访问服务器)</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">function GetUrl(sUrl,success)&#123;</span><br><span class="line">    let http =&apos;&apos;;</span><br><span class="line">    //把url转为url对象</span><br><span class="line">    let urlObj=url.parse(sUrl);</span><br><span class="line">    //判断调用引入http模块/https模块</span><br><span class="line">    if (urlObj.protocol == &apos;http:&apos;)&#123;</span><br><span class="line">        http =require(&apos;http&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        http =require(&apos;https&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    //访问服务器</span><br><span class="line">    let req =http.request(&#123;</span><br><span class="line">        &apos;hostname&apos;:urlObj.hostname,</span><br><span class="line">        &apos;path&apos;:urlObj.path</span><br><span class="line">    &#125;,res=&gt;&#123;</span><br><span class="line">        //判断重定向</span><br><span class="line">        if (res.statusCode==200)&#123;</span><br><span class="line">            let arr =[];</span><br><span class="line">            let str=&apos;&apos;;</span><br><span class="line">            //res.on(&apos;data&apos;,()=&gt;&#123;&#125;)node访问post数据</span><br><span class="line">            res.on(&apos;data&apos;,buffer=&gt;&#123;</span><br><span class="line">                arr.push(buffer);</span><br><span class="line">                str +=buffer;</span><br><span class="line">            &#125;);</span><br><span class="line">            //访问完成</span><br><span class="line">            res.on(&apos;end&apos;,()=&gt;&#123;</span><br><span class="line">                //数据转为Buffer</span><br><span class="line">                let b =Buffer.concat(arr);</span><br><span class="line">                success &amp;&amp; success(b);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        else if(res.statusCode==302||res.statusCode==301)&#123;</span><br><span class="line">            //递归调用</span><br><span class="line">            GetUrl(res.headers.location,success);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    req.end();</span><br><span class="line">    req.on(&quot;error&quot;, ()=&gt;&#123;</span><br><span class="line">        console.log(&apos;404-not found&apos;);</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <!-- <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p> -->
+    Created By 七夜的许愿星
+</footer>
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

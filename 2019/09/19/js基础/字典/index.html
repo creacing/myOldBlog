@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        js字典 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        <div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/favicon.ico">
+        </div>
+        <div class="name">
+            <i>七夜的许愿星</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        js字典
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-09-19 16:13:14</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#dictionary" title="dictionary">dictionary</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <p>构造字典<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br></pre></td><td class="code"><pre><span class="line">class Dictionary &#123;</span><br><span class="line">    //构造函数</span><br><span class="line">    constructor(toStrFn =defaultToString)&#123;</span><br><span class="line">        this.toStrFn =toStrFn;</span><br><span class="line">        this.table =&#123;&#125;;</span><br><span class="line">    &#125;;</span><br><span class="line"> &#125;</span><br><span class="line">//确保键一定是字符串</span><br><span class="line">let defaultToString=function defaultToString(item) &#123;</span><br><span class="line">    if (item===null)&#123;</span><br><span class="line">        return &quot;NULL&quot;;</span><br><span class="line">    &#125;else if (item ===undefined)&#123;</span><br><span class="line">        return &quot;UNDEFINED&quot;;</span><br><span class="line">        // instanceof运算符用于测试构造函数的prototype属性是否出现在对象的原型链中的任何位置</span><br><span class="line">    &#125;else if (typeof item===&quot;string&quot;||item instanceof String)&#123;</span><br><span class="line">        return `$&#123;item&#125;`;</span><br><span class="line">    &#125;</span><br><span class="line">    return item.toString();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//字典中每个键只有一个值，以[键，值]形式存储元素</span><br><span class="line">// import defaultToString from &apos;./util&apos;;</span><br><span class="line">// **</span><br><span class="line">// export与export default均可用于导出常量、函数、文件、模块等</span><br><span class="line">// 2、你可以在其它文件或模块中通过import+(常量 | 函数 | 文件 | 模块)名的方式，将其导入，以便能够对其进行使用</span><br><span class="line">// 3、在一个文件或模块中，export、import可以有多个，export default仅有一个</span><br><span class="line">//valuePair类</span><br><span class="line">class ValuePair &#123;</span><br><span class="line">    constructor(key,value)&#123;</span><br><span class="line">        this.key =key;</span><br><span class="line">        this.value=value;</span><br><span class="line">    &#125;</span><br><span class="line">    toString()&#123;</span><br><span class="line">        return `[#$&#123;this.key&#125;:$&#123;this.value&#125;]`;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 4、通过export方式导出，在导入时要加&#123; &#125;，export default则不需要</span><br><span class="line">class Dictionary &#123;</span><br><span class="line">    //构造函数</span><br><span class="line">    constructor(toStrFn =defaultToString)&#123;</span><br><span class="line">        this.toStrFn =toStrFn;</span><br><span class="line">        this.table =&#123;&#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">    //检测一个键是否存在于字典中</span><br><span class="line">    //js只允许我们使用字符串作为对象的键名和属性名</span><br><span class="line">    hasKey(key)&#123;</span><br><span class="line">        return this.table[this.toStrFn(key)] !=null;</span><br><span class="line">    &#125;</span><br><span class="line">    //set方法</span><br><span class="line">    set(key,value)&#123;</span><br><span class="line">        if (key !=null &amp;&amp; value !=null)&#123;</span><br><span class="line">            const tableKey =this.toStrFn(key);</span><br><span class="line">            this.table[tableKey] =new ValuePair(key,value);</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;;</span><br><span class="line">    //remove方法</span><br><span class="line">    remove(key)&#123;</span><br><span class="line">        if (this.hasKey(key))&#123;</span><br><span class="line">            delete this.table[this.toStrFn(key)];</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;;</span><br><span class="line">    //检索一个值get方法</span><br><span class="line">    get(key)&#123;</span><br><span class="line">        const valuePair =this.table[this.toStrFn(key)];</span><br><span class="line">        return valuePair ==null ?undefined :valuePair.value;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    //keyValues方法\</span><br><span class="line">    //方法一</span><br><span class="line">    keyValues()&#123;</span><br><span class="line">        return Object.values(this.table);</span><br><span class="line">    &#125;</span><br><span class="line">    //方法二</span><br><span class="line">    keyValues()&#123;</span><br><span class="line">        const valuePairs =[];</span><br><span class="line">        for (const k in this.table)&#123;</span><br><span class="line">            if (this.hasKey(k))&#123;</span><br><span class="line">                valuePairs.push(this.table[k]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return valuePairs;</span><br><span class="line">    &#125;;</span><br><span class="line">    //keys方法</span><br><span class="line">    keys()&#123;</span><br><span class="line">        return this.keyValues().map(valuePair =&gt;&#123;</span><br><span class="line">           return valuePair.key</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">    //方法二</span><br><span class="line">    // keys()&#123;</span><br><span class="line">    //   const keys=[];</span><br><span class="line">    //   const valuePairs =this.keyValues();</span><br><span class="line">    //   for (let i=0;i&lt;valuePairs.length;i++)&#123;</span><br><span class="line">    //       keys.push(valuePairs[i].key);</span><br><span class="line">    //   &#125;</span><br><span class="line">    //   return keys;</span><br><span class="line">    // &#125;;</span><br><span class="line">    values()&#123;</span><br><span class="line">        return this.keyValues().map(valuePair =&gt; &#123;</span><br><span class="line">            return valuePair.value;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">    //方法二</span><br><span class="line">    // values()&#123;</span><br><span class="line">    //     const values=[];</span><br><span class="line">    //     const valuePairs =this.keyValues();</span><br><span class="line">    //     for (let i=0;i&lt;valuePairs.length;i++)&#123;</span><br><span class="line">    //         values.push(valuePairs[i].value);</span><br><span class="line">    //     &#125;</span><br><span class="line">    //     return values;</span><br><span class="line">    // &#125;;</span><br><span class="line"></span><br><span class="line">    //forEach</span><br><span class="line">    forEach(callbackFn)&#123;</span><br><span class="line">        const valuePairs =this.keyValues();</span><br><span class="line">        for (let i=0;i&lt;valuePairs.length;i++)&#123;</span><br><span class="line">            const result =callbackFn(valuePairs[i].key,valuePairs[i].value);</span><br><span class="line">            if (result===false)&#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    //size方法</span><br><span class="line">    size()&#123;</span><br><span class="line">        return Object.keys(this.table).length;</span><br><span class="line">        // return this.keyValues().length;</span><br><span class="line">    &#125;;</span><br><span class="line">    //isEmpty方法</span><br><span class="line">    isEmpty()&#123;</span><br><span class="line">        return this.size()===0;</span><br><span class="line">    &#125;;</span><br><span class="line">    //clear方法</span><br><span class="line">    clear()&#123;</span><br><span class="line">        return this.table=&#123;&#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">    //toString方法</span><br><span class="line">    toString()&#123;</span><br><span class="line">        if (this.isEmpty())&#123;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        const valuePairs =this.keyValues();</span><br><span class="line">        let objString =`$&#123;valuePairs[0].toString()&#125;`;</span><br><span class="line">        for (let i=1;i&lt;valuePairs.length;i++)&#123;</span><br><span class="line">            objString=`$&#123;objString&#125;,$&#123;valuePairs[i].toString()&#125;`;</span><br><span class="line">        &#125;</span><br><span class="line">        return objString;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line">//测试</span><br><span class="line">const dictionary =new Dictionary();</span><br><span class="line">dictionary.set(&apos;aaaa&apos;,&quot;afdafad&quot;);</span><br><span class="line">dictionary.set(&apos;bbbb&apos;,&quot;dfadfaf&quot;);</span><br><span class="line">dictionary.set(&apos;cccc&apos;,&quot;ddsdffd&quot;);</span><br><span class="line"></span><br><span class="line">console.log(dictionary.hasKey(&apos;aaaa&apos;));</span><br><span class="line">console.log(dictionary.size());</span><br><span class="line">console.log(dictionary.get(&apos;aaaa&apos;));</span><br><span class="line">// console.log(dictionary);</span><br><span class="line">console.log(dictionary.toString());</span><br><span class="line">dictionary.forEach((k,v)=&gt;&#123;</span><br><span class="line">    console.log(&apos;forEach:&apos;, `key:$&#123;k&#125;,value:$&#123;v&#125;`);</span><br><span class="line">&#125;) ;</span><br><span class="line">console.log(dictionary.keyValues());</span><br><span class="line">console.log(dictionary.values());</span><br><span class="line">console.log(dictionary.keys());</span><br></pre></td></tr></table></figure></p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <!-- <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p> -->
+    Created By 七夜的许愿星
+</footer>
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

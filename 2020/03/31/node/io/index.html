@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        node基础 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        <div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/favicon.png">
+        </div>
+        <div class="name">
+            <i>七夜的许愿星</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#node-js基础整理"><span class="toc-text">node.js基础整理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#I-O"><span class="toc-text">I/O</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#node为什么选择js"><span class="toc-text">node为什么选择js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模块"><span class="toc-text">模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模块化"><span class="toc-text">模块化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#关键词require，exports，module"><span class="toc-text">关键词require，exports，module</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-exports"><span class="toc-text">1.2 exports</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-module"><span class="toc-text">1.3 module</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#注释-exports是module-exports的引用"><span class="toc-text">注释:exports是module.exports的引用</span></a></li></ol></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        node基础
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2020-03-31 16:37:40</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#node" title="node">node</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h2 id="node-js基础整理"><a href="#node-js基础整理" class="headerlink" title="node.js基础整理"></a>node.js基础整理</h2><h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><p>IO端口，I/O输入/输出(Input/Output)，分为IO设备和IO接口两个部分。每个设备都会有一个专用的I/O地址，用来处理自己的输入输出信息。I/O地址绝对不能重复，如果两个设备的I/O地址有冲突，系统硬件就不能正常工作。</p>
+<h2 id="node为什么选择js"><a href="#node为什么选择js" class="headerlink" title="node为什么选择js"></a>node为什么选择js</h2><p>js没有自带的I/O，有良好的事件支持机制</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><h4 id="关键词require，exports，module"><a href="#关键词require，exports，module" class="headerlink" title="关键词require，exports，module"></a>关键词require，exports，module</h4><p>#####1.1 require<br>例:let foo = require(‘./bar.js’);</p>
+<h5 id="1-2-exports"><a href="#1-2-exports" class="headerlink" title="1.2 exports"></a>1.2 exports</h5><p>例:exports.hello = function () { console.log(“Hello World!”); }</p>
+<h5 id="1-3-module"><a href="#1-3-module" class="headerlink" title="1.3 module"></a>1.3 module</h5><p>例:module.exports = function () { console.log(“Hello World!”); }</p>
+<h5 id="注释-exports是module-exports的引用"><a href="#注释-exports是module-exports的引用" class="headerlink" title="注释:exports是module.exports的引用"></a>注释:exports是module.exports的引用</h5><p>module.exports既可以通过点语法，也可以直接赋值一个对象<br>例:module.exports.xxx=xxx<br>module.exports=xxx，<br>exports只能用”.”例:exports.xxx=xxx</p>
+<p>#####</p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <!-- <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p> -->
+    Created By 七夜的许愿星
+</footer>
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
