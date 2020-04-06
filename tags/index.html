@@ -55,32 +55,32 @@
             <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>主页</span>
+                    <span>HOME</span>
                 </a>
             </li>
             <li class="active">
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>标签</span>
+                    <span>TAGS</span>
                 </a>
             </li>
             <li>
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>存档</span>
+                    <span>ARCHIVES</span>
                 </a>
             </li>
             <li>
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>关于</span>
+                    <span>ABOUT</span>
                 </a>
             </li>
             
             <li>
                 <a id="search">
                     <i class="iconfont icon-sousuo1"></i>
-                    <span>搜索</span>
+                    <span>SEARCH</span>
                 </a>
             </li>
             
@@ -95,7 +95,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input">
-            <span id="begin-search">搜索</span>
+            <span id="begin-search">search</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -113,15 +113,17 @@
     
     <a href="#水平居中" title="水平居中" rel="1">水平居中</a>
     
-    <a href="#垂直居中" title="垂直居中" rel="1">垂直居中</a>
-    
     <a href="#setting" title="setting" rel="2">setting</a>
     
-    <a href="#java-array" title="java-array" rel="1">java-array</a>
+    <a href="#http基础" title="http基础" rel="1">http基础</a>
     
     <a href="#js-call-bind-apply" title="js-call-bind-apply" rel="1">js-call-bind-apply</a>
     
+    <a href="#global,window" title="global,window" rel="1">global,window</a>
+    
     <a href="#js-type" title="js-type" rel="1">js-type</a>
+    
+    <a href="#let,var" title="let,var" rel="1">let,var</a>
     
     <a href="#Set-Map" title="Set-Map" rel="1">Set-Map</a>
     
@@ -133,25 +135,33 @@
     
     <a href="#生成器" title="生成器" rel="1">生成器</a>
     
+    <a href="#箭头函数" title="箭头函数" rel="1">箭头函数</a>
+    
     <a href="#type" title="type" rel="1">type</a>
     
-    <a href="#迭代器" title="迭代器" rel="1">迭代器</a>
+    <a href="#java-array" title="java-array" rel="1">java-array</a>
     
     <a href="#node" title="node" rel="2">node</a>
+    
+    <a href="#迭代器" title="迭代器" rel="1">迭代器</a>
     
     <a href="#node.js" title="node.js" rel="4">node.js</a>
     
     <a href="#react" title="react" rel="1">react</a>
     
-    <a href="#dictionary" title="dictionary" rel="1">dictionary</a>
+    <a href="#problems" title="problems" rel="1">problems</a>
     
-    <a href="#散列表冲突解决之分离链接" title="散列表冲突解决之分离链接" rel="1">散列表冲突解决之分离链接</a>
+    <a href="#dictionary" title="dictionary" rel="1">dictionary</a>
     
     <a href="#散列表冲突解决之线性探查" title="散列表冲突解决之线性探查" rel="1">散列表冲突解决之线性探查</a>
     
-    <a href="#集合" title="集合" rel="1">集合</a>
-    
     <a href="#微信小程序" title="微信小程序" rel="1">微信小程序</a>
+    
+    <a href="#散列表冲突解决之分离链接" title="散列表冲突解决之分离链接" rel="1">散列表冲突解决之分离链接</a>
+    
+    <a href="#垂直居中" title="垂直居中" rel="1">垂直居中</a>
+    
+    <a href="#集合" title="集合" rel="1">集合</a>
     
 </div>
 
@@ -180,44 +190,9 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="垂直居中">
-                    <span class="tag-text">垂直居中</span>
-                </span>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2020/04/02/css/垂直居中/">
-            <h2 class="post-title">
-                css垂直居中
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-</div>
-
-<div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="setting">
                     <span class="tag-text">setting</span>
                 </span>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2020/02/25/git/代理/">
-            <h2 class="post-title">
-                git代理
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
     
     <!-- <li class="listing-item">
     <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
@@ -233,11 +208,25 @@
         <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
     </div>
     
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2020/02/25/git/代理/">
+            <h2 class="post-title">
+                git代理
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="java-array">
-                    <span class="tag-text">java-array</span>
+                <span class="fa fa-tag listing-seperator" id="http基础">
+                    <span class="tag-text">http基础</span>
                 </span>
     
     <!-- <li class="listing-item">
@@ -245,9 +234,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2020/03/12/java/java数组/">
+        <a href="/2020/04/02/http/http/">
             <h2 class="post-title">
-                java数组
+                http基础
             </h2>
             
         </a>
@@ -278,6 +267,27 @@
 </div>
 
 <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="global,window">
+                    <span class="tag-text">global,window</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2020/04/06/js基础/global和window/">
+            <h2 class="post-title">
+                global和window
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="js-type">
                     <span class="tag-text">js-type</span>
                 </span>
@@ -290,6 +300,27 @@
         <a href="/2019/08/07/js基础/js类型/">
             <h2 class="post-title">
                 js类型
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="let,var">
+                    <span class="tag-text">let,var</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2020/04/06/js基础/let和var/">
+            <h2 class="post-title">
+                let和var
             </h2>
             
         </a>
@@ -418,6 +449,27 @@
 </div>
 
 <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="箭头函数">
+                    <span class="tag-text">箭头函数</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2020/04/06/js基础/箭头函数的问题/">
+            <h2 class="post-title">
+                箭头函数的问题
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="type">
                     <span class="tag-text">type</span>
                 </span>
@@ -439,8 +491,8 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="迭代器">
-                    <span class="tag-text">迭代器</span>
+                <span class="fa fa-tag listing-seperator" id="java-array">
+                    <span class="tag-text">java-array</span>
                 </span>
     
     <!-- <li class="listing-item">
@@ -448,9 +500,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2020/03/11/js基础/迭代器/">
+        <a href="/2020/03/12/java/java数组/">
             <h2 class="post-title">
-                迭代器
+                java数组
             </h2>
             
         </a>
@@ -495,6 +547,27 @@
 </div>
 
 <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="迭代器">
+                    <span class="tag-text">迭代器</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2020/03/11/js基础/迭代器/">
+            <h2 class="post-title">
+                迭代器
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="node.js">
                     <span class="tag-text">node.js</span>
                 </span>
@@ -504,9 +577,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2019/08/13/node/nodejs实现爬虫/">
+        <a href="/2019/05/16/node/node写入流/">
             <h2 class="post-title">
-                nodejs实现爬虫
+                node写入文件
             </h2>
             
         </a>
@@ -518,9 +591,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2019/05/16/node/node写入流/">
+        <a href="/2019/08/13/node/nodejs实现爬虫/">
             <h2 class="post-title">
-                node写入文件
+                nodejs实现爬虫
             </h2>
             
         </a>
@@ -579,6 +652,27 @@
 </div>
 
 <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="problems">
+                    <span class="tag-text">problems</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2020/04/04/problems/问题总汇/">
+            <h2 class="post-title">
+                problems
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="dictionary">
                     <span class="tag-text">dictionary</span>
                 </span>
@@ -591,27 +685,6 @@
         <a href="/2019/09/19/基于js的数据结构与算法/字典/">
             <h2 class="post-title">
                 js字典
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-</div>
-
-<div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="散列表冲突解决之分离链接">
-                    <span class="tag-text">散列表冲突解决之分离链接</span>
-                </span>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2019/09/19/基于js的数据结构与算法/散列表冲突解决分离链接/">
-            <h2 class="post-title">
-                散列表冲突解决之分离链接
             </h2>
             
         </a>
@@ -642,27 +715,6 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="集合">
-                    <span class="tag-text">集合</span>
-                </span>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2019/09/19/基于js的数据结构与算法/集合/">
-            <h2 class="post-title">
-                集合
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-</div>
-
-<div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="微信小程序">
                     <span class="tag-text">微信小程序</span>
                 </span>
@@ -675,6 +727,69 @@
         <a href="/2020/03/19/小程序/微信/">
             <h2 class="post-title">
                 微信小程序
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="散列表冲突解决之分离链接">
+                    <span class="tag-text">散列表冲突解决之分离链接</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/09/19/基于js的数据结构与算法/散列表冲突解决分离链接/">
+            <h2 class="post-title">
+                散列表冲突解决之分离链接
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="垂直居中">
+                    <span class="tag-text">垂直居中</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2020/04/02/css/垂直居中/">
+            <h2 class="post-title">
+                css垂直居中
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="集合">
+                    <span class="tag-text">集合</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/09/19/基于js的数据结构与算法/集合/">
+            <h2 class="post-title">
+                集合
             </h2>
             
         </a>
