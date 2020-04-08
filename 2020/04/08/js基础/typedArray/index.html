@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        typedArray - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        <div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/favicon.png">
+        </div>
+        <div class="name">
+            <i>七夜的许愿星</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#typedArray"><span class="toc-text">typedArray</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#构造这样的位集合"><span class="toc-text">构造这样的位集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#大小端"><span class="toc-text">大小端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#检测大小端表示的方法"><span class="toc-text">检测大小端表示的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#setInt16"><span class="toc-text">setInt16</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多视图"><span class="toc-text">多视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#带类数组构造器"><span class="toc-text">带类数组构造器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#带类数组的方法"><span class="toc-text">带类数组的方法</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        typedArray
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2020-04-08 10:43:50</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#typedArray" title="typedArray">typedArray</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h4 id="typedArray"><a href="#typedArray" class="headerlink" title="typedArray"></a>typedArray</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">带类型的数组是为了使用数组的形式来访问二进制数据。</span><br></pre></td></tr></table></figure>
+<h4 id="构造这样的位集合"><a href="#构造这样的位集合" class="headerlink" title="构造这样的位集合"></a>构造这样的位集合</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let buf = new ArrayBuffer(32);</span><br><span class="line">buf.byteLength //32</span><br></pre></td></tr></table></figure>
+<p>buf 是一个二进制 buffer<br>长度为 32 字节 256 位<br>预初始化 全部为 0<br>通过byteLength属性 查看它的长度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = new Uint16Array(buf)</span><br><span class="line">arr.length // 16</span><br><span class="line">arr 是在这个256位buf上 映射 的一个 16位 无符号整型 的 类型数组 即得到了一个 十六个元素 的数组</span><br></pre></td></tr></table></figure></p>
+<h4 id="大小端"><a href="#大小端" class="headerlink" title="大小端"></a>大小端</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">大小端的意思是 多字节数字中的 低字节位于这个数字字节表示的右侧还是左侧， </span><br><span class="line">大端是低字节在右侧</span><br><span class="line">小端是低字节在左端</span><br></pre></td></tr></table></figure>
+<p>目前web上最常用的是小端表示</p>
+<h4 id="检测大小端表示的方法"><a href="#检测大小端表示的方法" class="headerlink" title="检测大小端表示的方法"></a>检测大小端表示的方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">let littleEndian = (function()&#123;</span><br><span class="line">    let buffer = new ArrayBuffer(2);</span><br><span class="line">    new DataView(buffer).setInt16(0,256,true);</span><br><span class="line">    return new Int16Array(buffer)[0] === 256;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">DataView()方法</span><br><span class="line">let buf = new ArrayBuffer(2)</span><br><span class="line">let arr = new DataView(buf)</span><br><span class="line">console.log(arr);</span><br><span class="line">输出</span><br><span class="line">DataView &#123;</span><br><span class="line">  byteLength: 2,</span><br><span class="line">  byteOffset: 0,</span><br><span class="line">  buffer: ArrayBuffer &#123; [Uint8Contents]: &lt;00 00&gt;, byteLength: 2 &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">参数描述</span><br><span class="line">new DataView(buffer,byteOffset，byteLength)</span><br><span class="line"></span><br><span class="line">buffer  一个buffer对象</span><br><span class="line"></span><br><span class="line">byteOffset 描述了起始位置。默认从第一个字节开始。</span><br><span class="line"></span><br><span class="line">byteLength DataView 对象的字节长度。如果未指定，这个视图的长度将匹配buffer的长度。</span><br><span class="line"></span><br><span class="line">返回值  一个表示指定buffer的DataView 对象，比视图访问更底层更精确。</span><br></pre></td></tr></table></figure>
+<h4 id="setInt16"><a href="#setInt16" class="headerlink" title="setInt16"></a>setInt16</h4><p>Int16Array表示一个元素占16位2个字节<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">new Dataview.setInt16(byteOffset, value ,littleEndian)</span><br><span class="line"></span><br><span class="line">byteOffset 偏移量</span><br><span class="line">value 数组元素数值</span><br><span class="line">littleEndian 用来告诉DataView要使用那种大小端配置来操作</span><br><span class="line">小端为true</span><br><span class="line">大端为false</span><br></pre></td></tr></table></figure></p>
+<h4 id="多视图"><a href="#多视图" class="headerlink" title="多视图"></a>多视图</h4><p>单个buffer可以关联多个视图</p>
+<h4 id="带类数组构造器"><a href="#带类数组构造器" class="headerlink" title="带类数组构造器"></a>带类数组构造器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ES6 提供了下面这些带类数组构造器：</span><br><span class="line">• Int8Array（8 位有符号整型），Uint8Array（8 位无符号整型） ——Uint8ClampedArray（8 位无符号整型，每个值会被强制设置为在 0-255 内）</span><br><span class="line">• Int16Array （16 位有符号整型）, Uint16Array （16 位无符号整型）</span><br><span class="line">• Int32Array （32 位有符号整型）, Uint32Array （32 位无符号整型）</span><br><span class="line">• Float32Array （32 位浮点数， IEEE-754）</span><br><span class="line">• Float64Array （64 位浮点数， IEEE-754）</span><br></pre></td></tr></table></figure>
+<h4 id="带类数组的方法"><a href="#带类数组的方法" class="headerlink" title="带类数组的方法"></a>带类数组的方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map(fn),</span><br><span class="line">from(typedArray，fn)        (解决溢出的问题),</span><br><span class="line">sort(fn)        (默认使用数字排序)</span><br></pre></td></tr></table></figure>
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <!-- <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p> -->
+    Created By 七夜的许愿星
+</footer>
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
