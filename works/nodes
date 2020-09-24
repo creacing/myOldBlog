@@ -1,0 +1,7 @@
+node进程间通信的方式
+
+
+通信方式与进程产生方式有关
+node 的四种进程创建方式 spawn() ， exec() ， execFile() 和 fork()
+
+node进程批量管理方案
